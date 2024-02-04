@@ -1,0 +1,9 @@
+main{
+ margin: auto;   
+}
+#image-div, #image-div figcaption,h1{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}

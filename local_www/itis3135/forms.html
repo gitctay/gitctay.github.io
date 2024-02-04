@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Christian Taylor Clumsy Tiger || ITIS 3135 Homepage</title>
+        <title>Christian Taylor Clumsy Tiger || ITIS 3135 Form Page</title>
     </head>
     <body>
         <header>
@@ -17,13 +17,49 @@
                 <a href="contract.html">Contract</a>
                 ||
                 <a href="table.html">Table</a>
-                ||
-                <a href="forms.html">form?<sub> yes the text is different here than on the other one. I did this to spite you</sub></a>
             </nav>
         </header>
         <main>
-            <h2>Home</h2>
-            <p>Hello, you have made it to my 3135 Course Page</p>
+            <div id="form-div">
+                <h2>ITIS 3135 Form</h2>
+                <p>Hello, and <strong>WELCOME</strong> to my form</p>
+                <br>
+                <form action="#">
+                    <fieldset name="contactInfo">
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name here"><br>
+                        <label for="phone">Phone:</label><br>
+                        <input type="tel" id="phone" name="phone" required placeholder="919-5232-319"><br>
+                        <label for="email">Email Address:</label><br>
+                        <input type="email" id="email" name="email" required placeholder="bestmanbossman@yahoo.com">
+                    </fieldset>
+                    <p>Prefered Food for lunch:</p>
+                    <input type="radio" id="ChickenSandwich" name="pfood" value="ChickenSandwich">
+                    <label for="ChickenSandwich">Chicken Sandwich</label><br>
+                    <input type="radio" id="Soup" name="pfood" value="Soup">
+                    <label for="Soup">Soup</label><br>
+                    
+                    <p>Prefered Monitor Style <br> select <strong>all</strong> that apply</p>
+                   
+                    <input type="checkbox" id="enjoyM" name="enjoyThings" value="cenjoy1">
+                    <label for="enjoyM">I enjoy music!</label><br>
+                    <input type="checkbox" id="enjoyG" name="enjoyThings" value="cenjoy2">
+                    <label for="enjoyG">I enjoy games!</label><br>
+                    <input type="checkbox" id="enjoyT" name="enjoyThings" value="cenjoy3">
+                    <label for="enjoyT">I enjoy TV!</label><br>
+        
+                    <label for="workType">Select prefered work mode:</label><br>
+                    <select id="workType" name="workType">
+                        <option value="inPerson">In-Person</option>
+                        <option value="hybrid">Hybrid</option>
+                        <option value="wfh">Work From Home</option>
+                    </select>
+                    <br>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <br>
         </main>
         <footer>
             <nav>

@@ -1,0 +1,62 @@
+body {
+    background-color: #101820;
+    color: #FEE715;
+}
+
+.main-h1:hover {
+    color: red;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: black;
+}
+
+
+table th {
+    background-color: #1b1a1a;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #d0cccc;
+}
+
+
+table tr:nth-child(odd) {
+    background-color: #8d8a8a;
+}
+
+#form-div{
+    border: 2px black;
+    border-style: dashed;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    font-family:cursive,'Trebuchet MS';
+}
+
+#form-div input[type="submit"]{
+    background-color: #89ABE3FF;
+    color:#FCF6F5FF;
+}
+
+#form-div input[name="enjoyThings"]{
+    background-color: #89ABE3FF;
+    color:#FCF6F5FF;
+}
+
+#form-div strong{
+    font-size: x-large;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+#form-div fieldset[name="contactInfo"]{
+    color: greenyellow;
+    border:0px;
+    display: grid;
+    margin: 0px 5px 0px 5px;
+    padding: 5%;
+}
