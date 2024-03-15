@@ -1,0 +1,36 @@
+#logo_img{
+    max-height:150px;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    padding: 5px;
+    text-align: left;
+    text-wrap:wrap;
+    background-color: #522A27;
+    color: #CCDDB7;
+}
+
+strong{
+    color:#FE4A49
+}
+
+html{
+    margin: 2%;
+}
+
+.container_head{ /*Note: Flexbox is awesome why did you teach us anything else are you trying to torture us haha just kidding you would not do that??? right I mean I thought you were a nice guy. Imagine if a TA reads this I am so so so bored please let me pass this class I want to never touch this again or maybe I am falling in love with it nobody knows*/
+    display: flex;
+    flex-direction: row; /*this is also the default*/
+    justify-content:left;
+    align-items: center;
+}
+
+.container_main{
+
+}
+
+

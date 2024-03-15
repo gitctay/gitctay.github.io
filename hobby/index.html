@@ -1,0 +1,97 @@
+<!--
+    Multiple pages but one file
+    Need to have a bunch of html tags in one file with links to change the pages
+    load pages dynamically with an array USE AI FOR THIS
+-->
+
+<!-- Requirements 
+
+1)   Each page needs to have a minimum of three things under each thing i.e 2 paragraphs and a picture
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Page</title>
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .page-content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" data-page="home">Home</a>
+            <a href="#" data-page="about">About</a>
+            <a href="#" data-page="contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="page-container" class="page-content">
+        <!-- Page content will be loaded here -->
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Dynamic Page</p>
+    </footer>
+
+    <script>
+        const pages = {
+            home: `
+                <h1>Welcome to the Home Page</h1>
+                <p>This is the home page content.</p>
+                <p>Here's an image:</p>
+                <img src="https://via.placeholder.com/350x150" alt="Placeholder Image">
+            `,
+            about: `
+                <h1>About Us</h1>
+                <p>We are a dynamic website that loads content on the fly.</p>
+                <p>Here's another image:</p>
+                <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
+            `,
+            contact: `
+                <h1>Contact Us</h1>
+                <p>You can reach us at example@example.com.</p>
+                <p>Here's a third image:</p>
+                <img src="https://via.placeholder.com/400x300" alt="Placeholder Image">
+            `
+        };
+
+        const pageContainer = document.getElementById('page-container');
+        const navLinks = document.querySelectorAll('nav a');
+
+        function loadPage(page) {
+            pageContainer.innerHTML = pages[page];
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const page = e.target.dataset.page;
+                loadPage(page);
+            });
+        });
+
+        // Load the home page by default
+        loadPage('home');
+    </script>
+</body>
+</html>

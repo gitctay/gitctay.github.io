@@ -1,9 +1,65 @@
+
+/* https://coolors.co/d8dbe2-a9bcd0-58a4b0-373f51-daa49a */
+
 body
 {
-  /* you better change this stuff */
-  margin: 300px;
-  font-family: papyrus;
-  color: red;
-  background-color: green;
-  font-size: 300%;
+  margin: 100px;
+  font-family: sans-serif;
+  color: #58a4b0;
+  background-color: #D8DBE2;
+  font-size: 100%;
 }
+
+a{
+  color: #373F51;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #DAA49A;
+}
+
+.webeval section:first h2
+{
+color: green;
+}
+
+
+
+
+
+@media screen and (min-width: 1024px) {
+  /* Your CSS rules for desktop go here */
+  /* For example: */
+  main {
+      font-size: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 90%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  main 
+  {
+    font-size: 14px;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+}
+
+
+@media screen and (max-width: 769px){
+  main 
+  {
+    font-size: 14px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+}
+
+
+
+

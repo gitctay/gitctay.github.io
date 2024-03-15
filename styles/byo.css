@@ -1,0 +1,40 @@
+.formContainer{
+    
+    display: flex;
+    padding:10%;
+    gap: 10px 5px;
+    flex-wrap:wrap;
+    flex-direction: column;
+    
+}
+
+
+
+.container_child{
+  display: flex;
+  align-items: center;
+}
+
+
+.container_child > input{
+  align-items: right;
+}
+
+
+
+
+
+
+body
+{
+  margin: 100px;
+  font-family: sans-serif;
+  color: #58a4b0;
+  background-color: #D8DBE2;
+  font-size: 100%;
+}
+
+main{
+    text-wrap: auto;
+
+}

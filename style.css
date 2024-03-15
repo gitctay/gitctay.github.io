@@ -1,3 +1,7 @@
+a{
+    color: #000;
+}
+
 body {
     background-color: #101820;
     color: #FEE715;
@@ -6,6 +10,7 @@ body {
 .main-h1:hover {
     color: red;
 }
+
 
 table {
     width: 100%;
