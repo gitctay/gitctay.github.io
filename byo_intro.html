@@ -16,12 +16,10 @@
                 <label for="username">Name:</label>
                 <input type="text" id="username" name="nameInput" >
             </div>
-           
             <div class="container_child">
             <label for="mascot">Mascot:</label>
             <input type="text" id="mascot" name="mascotInput" >
             </div>
-            
             <div class="container_child">
             <label for="image">Image(JPEG or PNG only):</label>
             <input type="file" name="imageInput" accept=".png, .jpg" id="image" >
@@ -30,7 +28,6 @@
             <label for="imageCaption">Image Caption:</label>
             <input type="text" id="imageCaptionInput" >
             </div>
-
             <div class="container_child">
             <label for="personalBackground">Personal Background:</label>
             <input type="text" id="personalBackgroundInput" >
@@ -43,25 +40,23 @@
             <label for="academicBackground">Academic Background:</label>
             <input type="text" name="academicBackgroundInput" id="academicBackground" >
             </div>
-
             <div class="container_child">
             <label for="webdevBackground">Background in Web Development</label>
             <input type="text" name="webdevBackgroundInput" id="webdevBackground" >
             </div>
-
             <div class="container_child">
             <label for="primaryPC">Primary Computer Platform (Linux, Mac, Windows, etc)</label>
             <input type="text" name="primaryPCInput" id="primaryPC" >
             </div>
-
             <div class="container_child">
-            <label for="courseList">Courses currently taking:</label>
             <div id="courseList">
-                <input type="text" id="courseList" value="Submit" class="course" name="courseInput">
+                <input type="text" id="courseList" value="Submit" class="course" name="courseInput"><button type="button" id="courseAddButton">Add Course</button><br>
+                <label for="courseList">Courses currently taking:</label>
                 <ul id="classesList"></ul>
             </div>
-            <button type="button" id="courseAddButton">Add Course</button>
-            </div>
+        </div>
+            
+            
 
             <div class="container_child">
             <label for="funny">Somthing funny about you?</label>
@@ -78,10 +73,12 @@
                 <input type="checkbox" >
                 I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available.
             </label>
-            
-            <input type="submit" id="formSubmit" value="Submit"/> <input type="reset" value="Reset"/>
             </div>
-        </form>
+            <div class="container_child">
+                <input type="submit" id="formSubmit" value="Submit"/> <input type="reset" value="Reset"/>
+
+            </div>
+            </form>
     </Main>
     <footer></footer>
     <script src="scripts/survey.js"></script>

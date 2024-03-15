@@ -1,24 +1,39 @@
 .formContainer{
-    
-    display: flex;
-    padding:10%;
-    gap: 10px 5px;
-    flex-wrap:wrap;
-    flex-direction: column;
-    
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+padding: 1px;
+gap: 18px;
+margin: 20px;
+
 }
 
 
-
-.container_child{
-  display: flex;
+.container_child
+{
+  display:flex;
+  justify-content: flex-start;
   align-items: center;
+  gap:inherit  
+}
+
+label
+{
+  width: 200px;
+  text-wrap: wrap;
 }
 
 
-.container_child > input{
-  align-items: right;
-}
+
+
+
+
+
+
+
+
+
+
 
 
 
