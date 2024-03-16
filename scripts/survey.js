@@ -2,6 +2,7 @@ const userForm = document.getElementById('byoForm');
 const userFormInputs = userForm.querySelectorAll('input'); //This returns a nodelist
 const submitBtn = document.getElementsByTagName('formSubmit');
 const courseAddButton = document.getElementById('courseAddButton');
+const userInfoList = document.main.querySelectorAll('li:not[id]')
 
 
 
@@ -12,7 +13,6 @@ function checkRequired(userFormInputs){
         // userFormInputs[i].required = true;
         userFormInputs[i].setAttribute("required",""); //The reason this worked and required=true did not work?
     }
-    console.log(userFormInputs[1].required)
 }
 
 let classesValue = []
@@ -34,4 +34,11 @@ checkRequired(userFormInputs)
 
 
 
-
+function addUserInformation(userInfoList)
+{
+    let userInfoNames = []
+    for (let index = 0; index < userInfoList.length; index++) {
+        let element = userInfoList[index];
+        element.textContent+= 
+    }
+}
