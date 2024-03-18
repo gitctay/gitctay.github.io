@@ -2,8 +2,86 @@ const userForm = document.getElementById('byoForm');
 const userFormInputs = userForm.querySelectorAll('input'); //This returns a nodelist
 const submitBtn = document.getElementsByTagName('formSubmit');
 const courseAddButton = document.getElementById('courseAddButton');
-const userInfoList = document.main.querySelectorAll('li:not[id]')
+const classesListElement = document.getElementById("classesList");
+const formReset = document.getElementById("resetButton");
+let customIntroSection = document.getElementById("customIntro");
+let classesList = document.getElementById("classesListIntro")
+let introImage = document.getElementById("introImage")
+let textEntries = customIntroSection.querySelectorAll("ul > li:not(#classesListLI)");
+const listDefault = textEntries;
 
+
+
+// const userInfoList = document.main.querySelectorAll('li:not[id]');
+
+
+
+
+
+// function setDefaultTitles(textEntries){
+//     let tempDefault = []
+//     for (let index = 0; index < textEntries.length; index++) {
+//         tempDefault[index] = textEntries[index].innerHTML
+//     }
+
+//     return tempDefault;
+// }
+
+
+
+checkRequired(userFormInputs);
+
+userForm.addEventListener('submit',(event)=>{
+    event.preventDefault(); //Prevents default submit handler from occuring
+    let formData = userForm.querySelectorAll("input[type='text']:not([name='courseInput'],[name='imageCapInput'],[name='nameInput'])")
+    // userForm.hidden = true; //Need to modify the style display instead
+    userForm.style.display = 'none'
+    buildPageForm(formData);
+})
+
+
+
+
+function buildPageForm(formData){
+    let nameValue = document.getElementsByName("nameInput")[0].value
+    let imgCap = customIntroSection.getElementsByTagName("figcaption")[0];
+    imgCap.innerText = document.getElementsByName("imageCapInput")[0].value; 
+    
+    let nameSection = document.getElementById('introName')
+    nameSection.innerHTML = `${nameValue}'s INTRO!!!`
+    introImage.setAttribute("src",loadImage());
+   
+    
+    for(let i=0;i<textEntries.length;i++)
+    {
+        let currentElementValue = formData[i].value;
+        textEntries[i].innerHTML = textEntries[i].innerHTML + currentElementValue;
+    }
+
+    for(let j = 0; j<studentClassesPersonal.length;j++)
+    {
+        buttonRemove = studentClassesPersonal[j].getElementsByTagName('button')[0]
+        if(buttonRemove!=null)
+        {
+        studentClassesPersonal[j].removeChild(buttonRemove)
+        classesList.append(studentClassesPersonal[j])
+        }
+    }
+
+    customIntroSection.hidden = false;
+}
+
+
+
+
+function resetForm(){
+    formReset.click()
+    userForm.style.display = 'flex';
+    customIntroSection.hidden = true;
+    classesList.innerHTML = ""
+    studentClassesPersonal = []
+    textEntries = listDefault
+}
 
 
 
@@ -15,30 +93,67 @@ function checkRequired(userFormInputs){
     }
 }
 
-let classesValue = []
+let studentClassesPersonal = []
+
 
 courseAddButton.addEventListener('click',()=>{
-    let className = document.getElementsByName('courseInput')[0].value //Remember get by name returns a node list
-    addClasses(className);
+     //Remember get by name returns a node list
+    let className = document.getElementsByName('courseInput')[0].value
+    addClassesEntry(className);
 })
 
+let studentIndexCounter = 0;
+
 //TODO Add function that will edit the innerHTML of the ul to add classes
-function addClasses(className){
-    let tempLi = `<li>${className}</li>`
-    classesValue.push(tempLi)
-    let unorderedList = document.getElementById('classesList');
-    unorderedList.innerHTML += tempLi
+function addClassesEntry(className){
+    let tempLi = document.createElement("li") //Can also just add innerText
+    tempLi.setAttribute("class","classCode")
+    tempLi.innerText=className;
+    studentClassesPersonal.push(tempLi)
+    let delButton = document.createElement("button");
+    // delButton.classList.add("liDelete"); //ClassList add is often used for better readability and performance
+    delButton.innerText = "Delete"
+    delButton.setAttribute("class","liDelete")
+    delButton.setAttribute("type","button")
+    tempLi.append(delButton);
+    classesListElement.append(tempLi)
+    
+    // let unorderedList = document.getElementById('classesList');
 }
 
-checkRequired(userFormInputs)
+// delButton.addEventListener('click',(event)=>event.target.parentElement.remove());
 
+
+classesListElement.onclick = function(event){
+    let currentLI = event.target.closest('li') //Matches to the closest LI from where the event occured
+    if(!currentLI) return;  // if the current LI is not in target we return
+    if(!classesListElement.contains(currentLI)) return; // If the current LI is not in our table we return (stops it from getting a different LI)
+    studentClassesPersonal
+    let elementIndex = studentClassesPersonal.indexOf(currentLI)
+    if(studentClassesPersonal.indexOf(currentLI) >= 0){
+        studentClassesPersonal.splice(elementIndex,1)
+    }
+    else{
+        console.error("There is an issue with removing a class element from the array")
+        return
+    }
+    currentLI.remove();
+}
+
+function loadImage(){
+    let imageInput = document.getElementsByName("imageInput")[0];
+    let image = imageInput.files[0];
+    const imageUrl = URL.createObjectURL(image);
+    return imageUrl;
+}
 
 
 function addUserInformation(userInfoList)
 {
-    let userInfoNames = []
-    for (let index = 0; index < userInfoList.length; index++) {
+    let userInfoNames = [];
+    for (let index = 0; index < userInfoList.length; index++)
+    {
         let element = userInfoList[index];
-        element.textContent+= 
+        // element.textContent+= 
     }
 }

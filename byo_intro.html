@@ -1,86 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/byo.css">
-    <title>BYO INTRO</title>
-</head>
-<body>
-    <header></header>
-    <Main>
-        <h2>BYO INTRO</h2>
-        <h3>Time to BYO Intro page, please fill out the form below so we can create your own page</h3>
-        <form id="byoForm" class="formContainer">
-            <div class="container_child">
-                <label for="username">Name:</label>
-                <input type="text" id="username" name="nameInput" >
-            </div>
-            <div class="container_child">
-            <label for="mascot">Mascot:</label>
-            <input type="text" id="mascot" name="mascotInput" >
-            </div>
-            <div class="container_child">
-            <label for="image">Image(JPEG or PNG only):</label>
-            <input type="file" name="imageInput" accept=".png, .jpg" id="image" >
-            </div>
-            <div class="container_child">
-            <label for="imageCaption">Image Caption:</label>
-            <input type="text" id="imageCaptionInput" >
-            </div>
-            <div class="container_child">
-            <label for="personalBackground">Personal Background:</label>
-            <input type="text" id="personalBackgroundInput" >
-            </div>
-            <div class="container_child">
-            <label for="professionalBackground">Professional Background:</label>
-            <input type="text" name="professionalBackgroundInput" id="professionalBackground" >
-            </div>
-            <div class="container_child">
-            <label for="academicBackground">Academic Background:</label>
-            <input type="text" name="academicBackgroundInput" id="academicBackground" >
-            </div>
-            <div class="container_child">
-            <label for="webdevBackground">Background in Web Development</label>
-            <input type="text" name="webdevBackgroundInput" id="webdevBackground" >
-            </div>
-            <div class="container_child">
-            <label for="primaryPC">Primary Computer Platform (Linux, Mac, Windows, etc)</label>
-            <input type="text" name="primaryPCInput" id="primaryPC" >
-            </div>
-            <div class="container_child">
-            <div id="courseList">
-                <input type="text" id="courseList" value="Submit" class="course" name="courseInput"><button type="button" id="courseAddButton">Add Course</button><br>
-                <label for="courseList">Courses currently taking:</label>
-                <ul id="classesList"></ul>
-            </div>
-        </div>
-            
-            
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/byo.css">
+        <title>BYO INTRO</title>
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <h2>BYO INTRO</h2>
+            <h3>Time to BYO Intro page, please fill out the form below so we can
+                create your own page</h3>
+            <form id="byoForm" class="formContainer" hidden="false">
+                <div class="container_child">
+                    <label for="username">Name:</label>
+                    <input type="text" id="username" name="nameInput">
+                </div>
+                <div class="container_child">
+                    <label for="mascot">Mascot:</label>
+                    <input type="text" id="mascot" name="mascotInput">
+                </div>
+                <div class="container_child">
+                    <label for="image">Image(JPEG or PNG only):</label>
+                    <input type="file" name="imageInput" accept=".png, .jpg"
+                        id="image">
+                    <button type="Button">Click to load image</button>
+                </div>
+                <div class="container_child">
+                    <label for="imageCaption">Image Caption:</label>
+                    <input type="text" id="imageCaptionInput"
+                        name="imageCapInput">
+                </div>
+                <div class="container_child">
+                    <label for="personalBackground">Personal Background:</label>
+                    <input type="text" id="personalBackgroundInput">
+                </div>
+                <div class="container_child">
+                    <label for="professionalBackground">Professional
+                        Background:</label>
+                    <input type="text" name="professionalBackgroundInput"
+                        id="professionalBackground">
+                </div>
+                <div class="container_child">
+                    <label for="academicBackground">Academic Background:</label>
+                    <input type="text" name="academicBackgroundInput"
+                        id="academicBackground">
+                </div>
+                <div class="container_child">
+                    <label for="webdevBackground">Background in Web
+                        Development</label>
+                    <input type="text" name="webdevBackgroundInput"
+                        id="webdevBackground">
+                </div>
+                <div class="container_child">
+                    <label for="primaryPC">Primary Computer Platform (Linux,
+                        Mac, Windows, etc)</label>
+                    <input type="text" name="primaryPCInput" id="primaryPC">
+                </div>
+                <div class="container_child">
+                    <div id="courseList">
+                        <input type="text" id="courseList" value="Submit"
+                            class="course" name="courseInput"><button
+                            type="button" id="courseAddButton">Add
+                            Course</button><br>
+                        <label for="courseList">Courses currently
+                            taking:</label>
+                        <ul id="classesList"></ul>
+                    </div>
+                </div>
 
-            <div class="container_child">
-            <label for="funny">Somthing funny about you?</label>
-            <input type="text" name="funnyInput" id="funny" >
-            </div>
+                <div class="container_child">
+                    <label for="funny">Somthing funny about you?</label>
+                    <input type="text" name="funnyInput" id="funny">
+                </div>
 
-            <div class="container_child">
-            <label for="otherInfoInput">Anything Else?</label>
-            <input type="text" name="otherInfoInput" id="otherInfo" >
-            </div>
-    
-            <div class="container_child">
-            <label>
-                <input type="checkbox" >
-                I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available.
-            </label>
-            </div>
-            <div class="container_child">
-                <input type="submit" id="formSubmit" value="Submit"/> <input type="reset" value="Reset"/>
+                <div class="container_child">
+                    <label for="otherInfoInput">Anything Else?</label>
+                    <input type="text" name="otherInfoInput" id="otherInfo">
+                </div>
 
-            </div>
+                <div class="container_child">
+                    <label>
+                        <input type="checkbox">
+                        I understand that what is on this page is not password
+                        protected and I will not put anything here that I don't
+                        want publicly available.
+                    </label>
+                </div>
+                <div class="container_child">
+                    <input type="submit" id="formSubmit" value="Submit" />
+                    <input type="reset" value="Reset" id="resetButton" />
+
+                </div>
             </form>
-    </Main>
-    <footer></footer>
-    <script src="scripts/survey.js"></script>
-</body>
+
+            <section id="customIntro" hidden="true">
+                <h2 style="text-align: center;" id="introName"></h2>
+                <img src alt id="introImage"
+                    style="max-width: 500px; max-height:650px;margin:auto;display:block;width:50%">
+                <figcaption style="text-align: center;"></figcaption>
+                <ul id="parentUL">
+                    <li><Strong>Mascot:</Strong></li>
+                    <li><strong>Personal Background:</strong></li>
+                    <li><strong>Professional Background:</strong></li>
+                    <li><strong>Academic Background:</strong></li>
+                    <li><strong>Web-Dev Background:</strong></li>
+                    <li><strong>Primary PC:</strong></li>
+                    <li><strong>Somthing funny about you?</strong></li>
+                    <li id="classesListLI"><strong>Classes I am taking:</strong><ul id="classesListIntro"></ul></li> 
+                    <li><strong>Anything Else?</strong></li>
+                </ul>
+                <button onclick="resetForm()">Another one?</button>
+                <style>
+                    #customIntro > li{
+                        padding: 5px;
+                    }
+                </style>
+            </section>
+        </main>
+        <footer></footer>
+        <script src="scripts/survey.js"></script>
+    </body>
 </html>
