@@ -8,8 +8,9 @@
 
 1)   Each page needs to have a minimum of three things under each thing i.e 2 paragraphs and a picture
 
-
 -->
+
+
 
 
 <!DOCTYPE html>
@@ -19,29 +20,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Page</title>
     <style>
+        /* General styles */
+        body {
+            font-family: 'Georgia', serif;
+            background: radial-gradient(circle at center, #a6c1ee, #fbd3e9);
+            color: #5e548e;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation styles */
         nav {
             display: flex;
-            justify-content: space-around;
-            background-color: #333;
+            justify-content: center;
+            background-color: #9b59b6;
             color: #fff;
             padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            margin: 20px;
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            padding: 10px;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
         }
+        nav a:hover {
+            color: #ffd700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Page content styles */
         .page-content {
-            padding: 20px;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            margin: 20px;
+            text-align: center;
+        }
+        .page-content h1 {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #8e44ad;
+            text-shadow: 0 0 10px rgba(142, 68, 173, 0.5);
+            margin-bottom: 30px;
+        }
+        .page-content p {
+            line-height: 1.6;
+            text-align: justify;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .page-content img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            max-width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .page-content img::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: radial-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+            border-radius: 10px;
+            z-index: -1;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #9b59b6;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            margin: 20px;
         }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <a href="#" data-page="home">Home</a>
-            <a href="#" data-page="about">About</a>
-            <a href="#" data-page="contact">Contact</a>
+            <a href="#" data-page="what">What</a>
+            <a href="#" data-page="where">Where</a>
+            <a href="#" data-page="who">Who</a>
+            <a href="#" data-page="why">Why</a>
+            <a href="#" data-page="how">How</a>
         </nav>
     </header>
 
@@ -55,23 +133,45 @@
 
     <script>
         const pages = {
-            home: `
-                <h1>Welcome to the Home Page</h1>
-                <p>This is the home page content.</p>
-                <p>Here's an image:</p>
+            what: `
+                <h1>What is this Website?</h1>
+                <p>This is where I am going to save my AI Promps and Paragraphs I generate</p>
+                <p>Beyond the lines of code, Christian's heart beats to the rhythm of music. Their evenings are a symphony of beats and melodies, courtesy of FL Studio—a digital audio workstation that serves as their creative canvas. Armed with an array of music-based plugins, Christian crafts sonic landscapes that evoke emotion and transport listeners to distant realms. From pulsating basslines to ethereal pads, each track is a testament to their passion.</p>
                 <img src="https://via.placeholder.com/350x150" alt="Placeholder Image">
             `,
-            about: `
-                <h1>About Us</h1>
-                <p>We are a dynamic website that loads content on the fly.</p>
-                <p>Here's another image:</p>
+        
+            who: `
+                <h1>Who is Christian Taylor?</h1>
+                <p>Christian Taylor is a dedicated software engineering enthusiast hailing from Charlotte, North Carolina. With an unwavering curiosity for technology and a penchant for problem-solving, Christian dives headfirst into the intricate world of code. Whether it's debugging a complex algorithm or crafting elegant software solutions, Christian's commitment to excellence shines through. Armed with a keyboard and a compiler, they navigate the digital landscape, weaving logic and creativity into functional applications.</p>
+                <p>Christian's dual life as a software engineer and a music producer is a harmonious blend—a fusion of logic and artistry that resonates in both binary and beats.</p>
                 <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
             `,
-            contact: `
-                <h1>Contact Us</h1>
-                <p>You can reach us at example@example.com.</p>
-                <p>Here's a third image:</p>
+        
+            when: `
+                <h1>When Does Christian Create Music?</h1>
+                <p>In the quiet embrace of late afternoons, I find solace in my creative sanctuary. The sun, casting elongated shadows through the window, paints my room in warm hues. It's during these golden hours that my musical journey unfolds. I sit cross-legged, fingers poised on the keyboard, or perhaps cradling my guitar. The notes, like whispered secrets, emerge from the strings or dance across the piano keys. Melodies weave themselves into existence, each chord a brushstroke on the canvas of my emotions.</p>
+                <p>Ah, the weekends—a symphony waiting to be composed. I retreat to my makeshift studio corner, surrounded by instruments, cables, and a tangle of creativity. The air hums with possibility. Perhaps I'll start with a rhythmic beat, tapping out patterns on my drum pads. Or maybe I'll loop a bassline, its vibrations grounding me. Lyrics form like dewdrops on petals, capturing fleeting emotions.</p>
                 <img src="https://via.placeholder.com/400x300" alt="Placeholder Image">
+            `,
+        
+            where: `
+                <h1>Where Does Christian Create Music?</h1>
+                <p>Photo Like picture of young adult small room in apartment with computer setup and headphones on the young adult. Colorful</p>
+                <img src="https://via.placeholder.com/500x400" alt="Placeholder Image">
+            `,
+        
+            why: `
+                <h1>Why Does Christian Create Music?</h1>
+                <p>Passion for Music Creation: In my free time, I find immense joy in creating music. Whether it's composing melodies, experimenting with harmonies, or crafting intricate beats, the process of music production captivates me. There's something magical about translating emotions and ideas into soundwaves. Perhaps it's the fusion of creativity and technicality that draws me in. Regardless, music-making is my sanctuary—a place where I can express myself freely.</p>
+                <p>The Rollercoaster of Emotions: Admittedly, it's not always smooth sailing. Frustration occasionally creeps in when a melody refuses to materialize or a mix doesn't quite hit the mark. But those moments of struggle are balanced by the sheer happiness I feel when everything clicks—the harmonies align, the rhythm grooves, and the track comes alive. Music, like life, is a beautiful blend of challenges and rewards, and I wouldn't have it any other way.</p>
+                <img src="https://via.placeholder.com/600x500" alt="Placeholder Image">
+            `,
+        
+            how: `
+                <h1>How Does Christian Create Music?</h1>
+                <p>FL Studio, also known as FruityLoops, offers an intuitive interface with various panels, menus, and toolbars. Within this creative environment, users can access a wide range of virtual instruments, effects, and plugins. The workflow involves arranging patterns in the Playlist, composing melodies in the Piano Roll, and layering sounds in the Channel Rack. FL Studio comes equipped with built-in instruments like 3x Osc, FLEX, and Harmless, and users can also load third-party VST plugins.</p>
+                <p>As music production unfolds, producers create beats by designing drum patterns using samples or virtual drum machines. The Channel Rack hosts drum sounds and loops. In the Piano Roll, musicians compose melodies, chords, and basslines, drawing notes, adjusting velocities, and experimenting with scales. Patterns are then arranged in the Playlist to create song sections such as intros, verses, and choruses. Layering audio clips, MIDI data, and automation brings the composition to life.</p>
+                <img src="https://via.placeholder.com/700x600" alt="Placeholder Image">
             `
         };
 

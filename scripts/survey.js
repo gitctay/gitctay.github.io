@@ -10,13 +10,7 @@ let introImage = document.getElementById("introImage")
 let textEntries = customIntroSection.querySelectorAll("ul > li:not(#classesListLI)");
 const listDefault = textEntries;
 
-
-
 // const userInfoList = document.main.querySelectorAll('li:not[id]');
-
-
-
-
 
 // function setDefaultTitles(textEntries){
 //     let tempDefault = []
@@ -27,10 +21,7 @@ const listDefault = textEntries;
 //     return tempDefault;
 // }
 
-
-
 checkRequired(userFormInputs);
-
 userForm.addEventListener('submit',(event)=>{
     event.preventDefault(); //Prevents default submit handler from occuring
     let formData = userForm.querySelectorAll("input[type='text']:not([name='courseInput'],[name='imageCapInput'],[name='nameInput'])")
@@ -55,7 +46,7 @@ function buildPageForm(formData){
     for(let i=0;i<textEntries.length;i++)
     {
         let currentElementValue = formData[i].value;
-        textEntries[i].innerHTML = textEntries[i].innerHTML + currentElementValue;
+        textEntries[i].innerHTML = textEntries[i].innerHTML + " " + currentElementValue;
     }
 
     for(let j = 0; j<studentClassesPersonal.length;j++)
@@ -68,7 +59,7 @@ function buildPageForm(formData){
         }
     }
 
-    customIntroSection.hidden = false;
+    customIntroSection.style.display = 'block';
 }
 
 
@@ -77,10 +68,11 @@ function buildPageForm(formData){
 function resetForm(){
     formReset.click()
     userForm.style.display = 'flex';
-    customIntroSection.hidden = true;
+    customIntroSection.style.display = 'none';
     classesList.innerHTML = ""
     studentClassesPersonal = []
     textEntries = listDefault
+    
 }
 
 
@@ -123,7 +115,6 @@ function addClassesEntry(className){
 
 // delButton.addEventListener('click',(event)=>event.target.parentElement.remove());
 
-
 classesListElement.onclick = function(event){
     let currentLI = event.target.closest('li') //Matches to the closest LI from where the event occured
     if(!currentLI) return;  // if the current LI is not in target we return
@@ -146,7 +137,6 @@ function loadImage(){
     const imageUrl = URL.createObjectURL(image);
     return imageUrl;
 }
-
 
 function addUserInformation(userInfoList)
 {

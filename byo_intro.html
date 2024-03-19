@@ -25,7 +25,6 @@
                     <label for="image">Image(JPEG or PNG only):</label>
                     <input type="file" name="imageInput" accept=".png, .jpg"
                         id="image">
-                    <button type="Button">Click to load image</button>
                 </div>
                 <div class="container_child">
                     <label for="imageCaption">Image Caption:</label>
@@ -60,7 +59,7 @@
                 </div>
                 <div class="container_child">
                     <div id="courseList">
-                        <input type="text" id="courseList" value="Submit"
+                        <input type="text" id="courseList"
                             class="course" name="courseInput"><button
                             type="button" id="courseAddButton">Add
                             Course</button><br>
@@ -112,14 +111,20 @@
                     <li><strong>Anything Else?</strong></li>
                 </ul>
                 <button onclick="resetForm()">Another one?</button>
-                <style>
-                    #customIntro > li{
-                        padding: 5px;
-                    }
-                </style>
+
             </section>
         </main>
         <footer></footer>
+        <style>
+            #customIntro > li{
+                padding: 5px;
+            }
+            #customIntro{
+                font-size: 20px;
+                padding: 5px;
+            }
+
+        </style>
         <script src="scripts/survey.js"></script>
     </body>
 </html>

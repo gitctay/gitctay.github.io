@@ -18,6 +18,7 @@ function getCurrentDate(){
     let day_of_week = day_of_week_array[date.getDay()];
     let currentHour = date.getHours()
     let minutes = date.getMinutes()
+    
     let timeFormat = currentHour >= 12 ? 'PM' : 'AM'; //This information was taken from GeeksForGeeks
     currentHour = currentHour % 12; //To see if it is 0
     currentHour = currentHour ? currentHour : 12;
