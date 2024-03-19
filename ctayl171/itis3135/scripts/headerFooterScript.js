@@ -3,42 +3,46 @@ const allHeader = document.getElementsByTagName('header')[0]
 
 
 
-allHeader.innerHTML+=`<nav>
+allHeader.innerHTML+=`<nav style="overflow:hidden;width:fit=content;"
+>
 <a href="/ctayl171/itis3135">Home</a>
-||
+( ͠❛ ͜ʖ͠❛ )
 <a href="/ctayl171/itis3135/introduction.html">introduction</a>
-||
+( ͠❛ ͜ʖ͠❛ )
 <a href="/ctayl171/itis3135/contract.html">Contract</a>
-||
+( ͠❛ ͜ʖ͠❛ )
 <a href="/ctayl171/itis3135/table.html">Table</a>
-||
+( ͠❛ ͜ʖ͠❛ )
 <a href="/ctayl171/itis3135/forms.html">Form</a>
-||
+( ͠❛ ͜ʖ͠❛ )
 <a href="/ctayl171/itis3135/website_evaluations.html">Website Evaluations</a>
-||
+( ͠❛ ͜ʖ͠❛ )
 <a href="/ctayl171/itis3135/clumsytiger.com/about.html">Clumsy Tiger About Page</a>
-||
+( ͠❛ ͜ʖ͠❛ )
+<a href="/ctayl171/itis3135/scriptTest.html">First JAVASCRIPT</a>
+( ͠❛ ͜ʖ͠❛ )
 <a href="/ctayl171/itis3135/cthelps.co/index.html">Firm Home Page</a>
+( ͠❛ ͜ʖ͠❛ )
 </nav>`
 
 allFooter.innerHTML += `
-<nav>
+<nav style="">
 <a
     href="https://webpages.charlotte.edu/ctayl171/">Charlotte.edu</a>
-||
+( ͠❛ ͜ʖ͠❛ )
 <a
     href="https://github.com/gitctay/gitctay.github.io">Github</a>
-||
+( ͠❛ ͜ʖ͠❛ )
 <a href="https://gitctay.github.io/">Github.io</a>
-||
+( ͠❛ ͜ʖ͠❛ )
 <a
     href="https://gitctay.github.io/local_www/itis3135/">itis3135.io</a>
-||
+( ͠❛ ͜ʖ͠❛ )
 <a href="https://www.freecodecamp.org/ctayl171">FreeCodeCamp</a>
-||
+( ͠❛ ͜ʖ͠❛ )
 <a
     href="https://www.codecademy.com/profiles/christianTaylor8191440473">CodeAcademy</a>
-||
+( ͠❛ ͜ʖ͠❛ )
 <a
     href="https://www.linkedin.com/in/christian-taylor-b67327182/">Linkedin</a>
 
