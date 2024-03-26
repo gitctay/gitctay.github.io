@@ -1,32 +1,81 @@
+// :root{
+//     --
+// }
+
+
 const allFooter = document.getElementsByTagName('footer')[0]
 const allHeader = document.getElementsByTagName('header')[0]
 
 
 
-allHeader.innerHTML+=`<nav style="overflow:hidden;width:fit=content;"
+
+styleTag = document.createElement('style')
+styleTag.innerHTML = `nav{
+    background-color: #FFA69E;
+    border-radius: 15px;
+    border-color: #373f51;
+    border-style:ridge;
+    border-width: 2px;
+    padding: 5px;
+    margin-left:auto;
+    margin-right:auto;
+
+    
+    max-width: fit-content;
+    font-size:12px
+  }
+
+  h1{
+    text-align:center;
+  }
+  footer{
+    margin-left:auto;
+    margin-right:auto;
+    max-width: fit-content;
+    text-align:center;
+  }
+    
+
+    `
+
+allHeader.innerHTML+=`<h1 ">Christian Taylor's Clumsy Tiger⋆ ★3135<h1><div id="headerDiv"></div><nav id="topbar" style="width:3200px;"
 >
 <a href="/ctayl171/itis3135">Home</a>
-( ͠❛ ͜ʖ͠❛ )
+⋆ ★
 <a href="/ctayl171/itis3135/introduction.html">introduction</a>
-( ͠❛ ͜ʖ͠❛ )
+⋆ ★
 <a href="/ctayl171/itis3135/contract.html">Contract</a>
-( ͠❛ ͜ʖ͠❛ )
+⋆ ★
+<a href="/ctayl171/itis3135/drawing.html">Drawing</a>
+⋆ ★
 <a href="/ctayl171/itis3135/table.html">Table</a>
-( ͠❛ ͜ʖ͠❛ )
+⋆ ★
 <a href="/ctayl171/itis3135/forms.html">Form</a>
-( ͠❛ ͜ʖ͠❛ )
+⋆ ★
 <a href="/ctayl171/itis3135/website_evaluations.html">Website Evaluations</a>
-( ͠❛ ͜ʖ͠❛ )
+⋆ ★
 <a href="/ctayl171/itis3135/clumsytiger.com/about.html">Clumsy Tiger About Page</a>
-( ͠❛ ͜ʖ͠❛ )
+⋆ ★
 <a href="/ctayl171/itis3135/scriptTest.html">First JAVASCRIPT</a>
-( ͠❛ ͜ʖ͠❛ )
+⋆ ★
 <a href="/ctayl171/itis3135/cthelps.co/index.html">Firm Home Page</a>
-( ͠❛ ͜ʖ͠❛ )
-</nav>`
+⋆ ★
+<a href=/ctayl171/itis3135/byo_intro.html>Build Intro</a>
+⋆ ★
+</nav>
+\n
+<nav>
+<a href="/ctayl171/itis3135/hobby/index.html">Hobby Site</a>
+⋆ ★
+<a href="/ctayl171/itis3135/some-things-may_e/otherstff/RDN 24!s.htm">Crappy</a>
+</nav>
+
+
+\n
+`
 
 allFooter.innerHTML += `
-<nav style="">
+<nav style="width:3200px;">
 <a
     href="https://webpages.charlotte.edu/ctayl171/">Charlotte.edu</a>
 ( ͠❛ ͜ʖ͠❛ )
@@ -62,12 +111,18 @@ id="validation_link_css">
     src="https://jigsaw.w3.org/css-validator/images/vcss"
     alt="Valid CSS!" href=https://jigsaw.w3.org/css-validator/validator?uri=${location.href}>
 </a>
-<img style="border:0;width:88px;height:31px"
-    src="https://jigsaw.w3.org/css-validator/images/vcss"
-    alt="Valid CSS!" href=https://wave.webaim.org/report#/${location.href}> 
+<a href="https://wave.webaim.org/report#/${location.href}">
+<img style="border:0;width:88px;height:31px;display:"
+    src="images/button_validation_wcag.png"
+    alt="Disablility"> 
 </a>
 `
 
 
+document.body.append(styleTag);
+
+allFooter.style.marginLeft = "auto"
+allFooter.style.marginRight = "auto"
+allFooter.style.maxWidth = "fit-content"
 //HAVE A PLACE TO PUT THE DISABILITY SECTION
 

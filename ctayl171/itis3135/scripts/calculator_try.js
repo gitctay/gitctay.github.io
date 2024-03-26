@@ -1,13 +1,12 @@
 const calculatorButtons = document.getElementById("calculatorButtons")
 const clearButton = document.getElementById("clearButton")
 const output = document.getElementById("outputDisplay")
-function loadDefault(isError)
+let isErrorState = false;
+
+function loadDefault()
 {
-    if(isError){
-        evalString = ``
-    }
     evalString = ``
-    outputDisplay.innerText = `Output:`
+    outputDisplay.innerText = ''
 }
 evalString = ``
 
@@ -19,8 +18,12 @@ calculatorButtons.onclick = function(event)
 
     
     let currentBtn = event.target.closest('button') //Matches to the closest LI from where the event occured
+    if(isErrorState){
+        loadDefault()
+        isErrorState=false;
+    }
     if(currentBtn===clearButton){
-        loadDefault(false)
+        loadDefault()
         return
     }
     if(!currentBtn) return;  // if the current LI is not in target we return
@@ -33,6 +36,7 @@ calculatorButtons.onclick = function(event)
             if(isNaN(evalString[evalString.length - 1]) || isNaN(evalString[0]))
             {
                 outputDisplay.innerText = "ERROR!"
+                isErrorState = true;
             }
             else
             {
@@ -54,6 +58,6 @@ calculatorButtons.onclick = function(event)
 
 clearButton.addEventListener("click",()=>
 {
-    loadDefault(false)
+    loadDefault()
 })
 

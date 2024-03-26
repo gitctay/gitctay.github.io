@@ -10,188 +10,342 @@
 
 -->
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Page</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Production Hobby</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <style>
-        /* General styles */
-        body {
-            font-family: 'Georgia', serif;
-            background: radial-gradient(circle at center, #a6c1ee, #fbd3e9);
-            color: #5e548e;
-            margin: 0;
-            padding: 0;
-        }
+      /* General styles */
+      body {
+        font-family: "Georgia", serif;
+        background: radial-gradient(circle at center, #a6c1ee, #fbd3e9);
+        color: #5e548e;
+        margin: 0;
+        padding: 0;
+      }
 
-        /* Navigation styles */
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #9b59b6;
-            color: #fff;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            margin: 20px;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            transition: all 0.3s ease;
-        }
-        nav a:hover {
-            color: #ffd700;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-        }
-
-        /* Page content styles */
-        .page-content {
-            padding: 40px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-            margin: 20px;
-            text-align: center;
-        }
-        .page-content h1 {
-            text-align: center;
-            font-family: 'Playfair Display', serif;
-            font-size: 36px;
-            color: #8e44ad;
-            text-shadow: 0 0 10px rgba(142, 68, 173, 0.5);
-            margin-bottom: 30px;
-        }
-        .page-content p {
-            line-height: 1.6;
-            text-align: justify;
-            margin-bottom: 20px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .page-content img {
-            display: block;
-            margin: 0 auto;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            max-width: 100%;
-            height: auto;
-            position: relative;
-            z-index: 1;
-        }
+      /* Navigation styles */
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #9b59b6;
+        color: #fff;
+        padding:10px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        margin: 20px;
+        align-items:center;
         
-        .page-content img::before {
-            content: "";
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: radial-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
-            border-radius: 10px;
-            z-index: -1;
-        }
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        transition: all 0.3s ease;
+        font-size: x-large;
+      }
 
-        /* Footer styles */
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #9b59b6;
-            color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            margin: 20px;
-        }
+      nav a[data-page="home"]{
+        text-align: left;
+      }
+
+      nav a:hover {
+        color: #ffd700;
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+      }
+
+      /* Page content styles */
+      .page-content {
+        padding: 40px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        margin: 20px;
+        text-align: center;
+      }
+      .page-content h1 {
+        text-align: center;
+        font-family: "Playfair Display", serif;
+        font-size: 36px;
+        color: #8e44ad;
+        text-shadow: 0 0 10px rgba(142, 68, 173, 0.5);
+        margin-bottom: 30px;
+      }
+      .page-content p {
+        line-height: 1.6;
+        text-align: justify;
+        margin-bottom: 20px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .page-content img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        max-width: 450px;
+        height: auto;
+        position: relative;
+        z-index: 1;
+      }
+
+      .img_figure p{
+        max-width: 400px;
+        text-align: left;
+        word-wrap: normal;
+        justify-content: center;
+      }
+
+      .img_figure figcaption{
+        padding-top: 10px;
+        word-wrap: normal;
+      }
+      
+
+
+      
+      .page-content img::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        background: radial-gradient(
+          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0.2)
+        );
+        border-radius: 10px;
+        z-index: -1;
+      }
+
+      /* Footer styles */
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #9b59b6;
+        color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        margin: 20px;
+      }
+
+      footer a{
+        text-decoration: none;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <a href="#" data-page="what">What</a>
-            <a href="#" data-page="where">Where</a>
-            <a href="#" data-page="who">Who</a>
-            <a href="#" data-page="why">Why</a>
-            <a href="#" data-page="how">How</a>
-        </nav>
+      <nav>
+        <a href="#" data-page="home">Home</a>
+        <span>🎵</span>
+        <a href="#" data-page="where">Where</a>
+        <span>🎵</span>
+        <a href="#" data-page="when">When</a>
+        <span>🎵</span>
+        <a href="#" data-page="who">About Me</a>
+        <span>🎵</span>
+        <a href="#" data-page="why">Why I do it</a>
+        <span>🎵</span>
+        <a href="#" data-page="how">How it's done</a>
+        <span>🎵</span>
+        <a href="#" data-page="ai">AI</a>
+        <span>🎵</span>
+      </nav>
     </header>
 
     <section id="page-container" class="page-content">
-        <!-- Page content will be loaded here -->
+      <!-- Page content will be loaded here -->
     </section>
 
     <footer>
-        <p>&copy; 2023 Dynamic Page</p>
+      
     </footer>
 
     <script>
-        const pages = {
-            what: `
-                <h1>What is this Website?</h1>
-                <p>This is where I am going to save my AI Promps and Paragraphs I generate</p>
-                <p>Beyond the lines of code, Christian's heart beats to the rhythm of music. Their evenings are a symphony of beats and melodies, courtesy of FL Studio—a digital audio workstation that serves as their creative canvas. Armed with an array of music-based plugins, Christian crafts sonic landscapes that evoke emotion and transport listeners to distant realms. From pulsating basslines to ethereal pads, each track is a testament to their passion.</p>
-                <img src="https://via.placeholder.com/350x150" alt="Placeholder Image">
-            `,
+      const pages = {
+
+        who: `
+        <h1>Who is Christian Taylor?</h1>
+
+        <p>Christian Taylor is a dedicated software engineering enthusiast hailing from Charlotte, North Carolina. With an unwavering curiosity for technology and a penchant for problem-solving, Christian dives headfirst into the intricate world of code. Whether it's debugging a complex algorithm or crafting elegant software solutions, Christian's commitment to excellence shines through. Armed with a keyboard and a compiler, they navigate the digital landscape, weaving logic and creativity into functional applications.</p>
         
-            who: `
-                <h1>Who is Christian Taylor?</h1>
-                <p>Christian Taylor is a dedicated software engineering enthusiast hailing from Charlotte, North Carolina. With an unwavering curiosity for technology and a penchant for problem-solving, Christian dives headfirst into the intricate world of code. Whether it's debugging a complex algorithm or crafting elegant software solutions, Christian's commitment to excellence shines through. Armed with a keyboard and a compiler, they navigate the digital landscape, weaving logic and creativity into functional applications.</p>
-                <p>Christian's dual life as a software engineer and a music producer is a harmonious blend—a fusion of logic and artistry that resonates in both binary and beats.</p>
-                <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
-            `,
+        <p>Christian's dual life as a software engineer and a music producer is a harmonious blend—a fusion of logic and artistry that resonates in both binary and beats. Their passion for music fuels their creative expression, as they seamlessly transition from writing code to composing melodies. With a keen ear for harmonies and an innate understanding of rhythmic patterns, Christian explores the boundless realms of sound, crafting intricate compositions that captivate listeners. Whether coding or producing, Christian's dedication to their craft is unwavering, pushing the boundaries of innovation and artistic expression.</p>
         
-            when: `
-                <h1>When Does Christian Create Music?</h1>
+        <figure class="img_figure">
+            <img src="./images/Who-Sort-Of.jfif" alt="Placeholder Image">
+            <figcaption>
+                This is what I look like 100% do not look into it...
+            </figcaption>
+            <p><i>Young adult with shaggy curly hair floating along the clouds. Purple dreamy like style</i></p>
+        </figure>
+            `,
+
+        when: `
+                <h1>When Does I Create Music?</h1>
                 <p>In the quiet embrace of late afternoons, I find solace in my creative sanctuary. The sun, casting elongated shadows through the window, paints my room in warm hues. It's during these golden hours that my musical journey unfolds. I sit cross-legged, fingers poised on the keyboard, or perhaps cradling my guitar. The notes, like whispered secrets, emerge from the strings or dance across the piano keys. Melodies weave themselves into existence, each chord a brushstroke on the canvas of my emotions.</p>
                 <p>Ah, the weekends—a symphony waiting to be composed. I retreat to my makeshift studio corner, surrounded by instruments, cables, and a tangle of creativity. The air hums with possibility. Perhaps I'll start with a rhythmic beat, tapping out patterns on my drum pads. Or maybe I'll loop a bassline, its vibrations grounding me. Lyrics form like dewdrops on petals, capturing fleeting emotions.</p>
-                <img src="https://via.placeholder.com/400x300" alt="Placeholder Image">
+                <figure class="img_figure">
+                  <img src="./images/When - Free Time.jpg" alt="Placeholder Image">
+                  <figcaption>BE FREE!</figcaption>
+                  <p><i>A clock with the arrow pointing to "free time" in the background it is night out with lots of stars, digital art</i></p>
+                </figure>
+                
+                
             `,
-        
-            where: `
-                <h1>Where Does Christian Create Music?</h1>
-                <p>Photo Like picture of young adult small room in apartment with computer setup and headphones on the young adult. Colorful</p>
-                <img src="https://via.placeholder.com/500x400" alt="Placeholder Image">
+
+        where: `
+                <h1>Where Do People Create Music?</h1>
+                <p>Music is an art form that can be created anywhere. With modern technology, all you really need is a way to record audio and you can lay down tracks wherever inspiration strikes. People have written and recorded songs in parks, on buses, at work during breaks, and even in bathroom stalls when a melody comes to them. The portability and accessibility of music creation tools means that the world can be your recording studio.</p>
+                <p>However, most people still tend to make music in more conventional settings like dedicated music studios or the comfort of their own homes. Professional studios provide an acoustically controlled environment along with high-end equipment and sound engineers to capture audio at the highest quality. For hobbyists and budding artists, bedrooms and home offices make private, quiet spaces to compose, play instruments, and record without interruptions. While music can happen anywhere, these dedicated spaces allow musicians to completely focus and hone their craft.</p>
+                <figure class="img_figure">
+                    <img style="max-width: 500px;height:auto" src="./images/Where Location.jpg" alt="Placeholder Image">
+                    <figcaption>Making Beats in My Bedroom<figcaption>
+                    <p><i>Photo Like picture of young adult small room in apartment with computer setup and headphones on the young adult. Colorful</i></p>
+                </>
+               
             `,
-        
-            why: `
-                <h1>Why Does Christian Create Music?</h1>
+
+        why: `
+                <h1>Why Do I Create Music?</h1>
                 <p>Passion for Music Creation: In my free time, I find immense joy in creating music. Whether it's composing melodies, experimenting with harmonies, or crafting intricate beats, the process of music production captivates me. There's something magical about translating emotions and ideas into soundwaves. Perhaps it's the fusion of creativity and technicality that draws me in. Regardless, music-making is my sanctuary—a place where I can express myself freely.</p>
                 <p>The Rollercoaster of Emotions: Admittedly, it's not always smooth sailing. Frustration occasionally creeps in when a melody refuses to materialize or a mix doesn't quite hit the mark. But those moments of struggle are balanced by the sheer happiness I feel when everything clicks—the harmonies align, the rhythm grooves, and the track comes alive. Music, like life, is a beautiful blend of challenges and rewards, and I wouldn't have it any other way.</p>
-                <img src="https://via.placeholder.com/600x500" alt="Placeholder Image">
+                <figure class="img_figure">    
+                    <img src="./images/Why.jfif" alt="Placeholder Image">
+                    <figcaption><i>Love of Creation</i></figcaption>
+                    <p><i>Create a digital representation of the mind creating something add music symbols and programming symbols to the image. Dreamy Style</i></p>
+                </>
+                
+               
             `,
-        
-            how: `
-                <h1>How Does Christian Create Music?</h1>
+
+        how: `
+                <h1>How Do I Create Music?</h1>
                 <p>FL Studio, also known as FruityLoops, offers an intuitive interface with various panels, menus, and toolbars. Within this creative environment, users can access a wide range of virtual instruments, effects, and plugins. The workflow involves arranging patterns in the Playlist, composing melodies in the Piano Roll, and layering sounds in the Channel Rack. FL Studio comes equipped with built-in instruments like 3x Osc, FLEX, and Harmless, and users can also load third-party VST plugins.</p>
                 <p>As music production unfolds, producers create beats by designing drum patterns using samples or virtual drum machines. The Channel Rack hosts drum sounds and loops. In the Piano Roll, musicians compose melodies, chords, and basslines, drawing notes, adjusting velocities, and experimenting with scales. Patterns are then arranged in the Playlist to create song sections such as intros, verses, and choruses. Layering audio clips, MIDI data, and automation brings the composition to life.</p>
-                <img src="https://via.placeholder.com/700x600" alt="Placeholder Image">
+                
+
+                <figure class="img_figure">
+                    <img src="./images/How FL Studio software.jpg" alt="Placeholder Image">
+                <figcaption>FL Studio Workspace</figcaption>
+                <p><i>The logo for "FL STUDIO" on a computerscreen</i></p>
+                </figure>
+                `,
+
+        home: 
+        
+            `   <h1>Music Production with FL Studio</h1>
+                <p>FL Studio, also known as FruityLoops, is a powerful digital audio workstation (DAW) that offers a comprehensive toolkit for music production. From crafting melodies and beats to recording vocals and mixing, FL Studio provides a versatile platform for creative expression.</p>
+                <h2>Creating Melodies</h2>
+                <p>Within the intuitive interface of FL Studio, you can use the Piano Roll to compose captivating melodies. Draw notes, adjust velocities, and experiment with different scales and chord progressions. The Piano Roll also allows you to quantize notes, ensuring precise timing and a tight groove.</p>
+                <figure class="img_figure">
+                    <img style="max-width:400px;max-height:600px" src="./images/Dreamy Midi Keyboard.jfif" alt="Piano Roll">
+                <figcaption>Dreamy Midi</figcaption>
+                <p><i>Dreamy Style midi keyboard simplistic with purple</i></p>
+                </figure>
+                
+
+              
+                <h2>Designing Drum Patterns</h2>
+                <p>Crafting dynamic drum patterns is a breeze in FL Studio. Utilize virtual drum machines, load samples, and arrange percussion elements in the Channel Rack. The Playlist lets you arrange drum patterns seamlessly, while the Piano Roll provides a visual representation for programming intricate rhythms.</p>
+                <figure class="img_figure">
+                    <img  style="max-width:400px;max-height:600px" src="./images/Dreamy Drums.jfif"  alt="Dreamy_Drums">
+                    <figcaption>Drums of Dreams</>
+                    <p><i>Dreamy Style Drums with greyish background </i></p>
+                    </figure>
+                <h2>Overlaying Vocals</h2>
+                <p>FL Studio's recording capabilities allow you to capture vocals and other live instrumentation. Simply arm a track, hit record, and lay down your vocal takes. You can then edit and process the recorded audio using FL Studio's built-in effects and plugins, ensuring a polished final product.</p>
+                
+                <figure class="img_figure">
+                <img  style="max-width:400px;max-height:600px" src="./images/Overlaying Audio.jfif"  alt="overlaying_vocals">
+                <figcaption>White Noise</>
+                <p><i>Audio Wave coming out of someones mouth, dreamy style</i></p>
+                </figure>
+
+                <h2>End Result</h2>
+    
+                
+                <p>With FL Studio's vast array of virtual instruments, effects, and mixing tools, the possibilities for music creation are endless. Unleash your creativity and bring your musical vision to life!</p>`,
+        ai: `
+                <h1>AI Prompts and Responses</h1>
+                <p>This page summarizes the prompts and responses given by the AI assistant during the development of this website.</p>
+                <h2>Initial Prompt</h2>
+                <p>You asked me to create a webpage that dynamically removes and adds HTML elements when the user clicks on the navigation bar buttons. The pages should have a main footer and header tag with at least two paragraphs and an image on each page.</p>
+                <h2>Response 1:</h2>
+                <p>I provided an HTML, CSS, and JavaScript code for a webpage that meets the requirements. The webpage has a navigation bar with three links: "Home", "About", and "Contact". The content for each page, including the header, two paragraphs, and an image, is stored in an object called pages. When a user clicks on a navigation link, the corresponding page content is loaded and displayed dynamically using JavaScript.</p>
+                <h2>Response 2:</h2>
+                <p>The prompt was to add more dreamy-like styles to the existing HTML page. The AI assistant added dreamy-like styles to the navigation, page content, and footer sections. This included adding box shadows, border-radius, and backdrop filters for a glowing effect. The text colors and font families were also adjusted to create a more whimsical look.</p>
+                <h2>Response 3:</h2>
+                <p>In response to a request for more contrasting background and text colors, the AI assistant updated the color scheme. The background was set to a dark shade, and the text color was set to a light shade for better contrast.</p>
+                <h2>Response 4:</h2>
+                <p>To achieve a more dreamy background, the AI assistant applied a radial gradient with shades of blue and pink to the body. The text and element colors were adjusted to complement the new background.</p>
+                <h2>Response 5:</h2>
+                <p>To improve the spacing and alignment, the AI assistant increased the padding and margins around various elements. The navigation links were centered, and the text content was aligned within the page content section.</p>
+                <h2>Response 6:</h2>
+                <p>To add a cool backdrop effect to the images, the AI assistant used a pseudo-element with a radial gradient background. This created a subtle glow effect around the images, enhancing the dreamy look of the website.</p>
+                <h2>Final Response</h2>
+                <p>Finally, the AI assistant created this new "AI" page to summarize all the prompts and responses given during the development process.</p>
+                <figure class="img_figure">
+                  <img src="./images/Anthropic logo.svg" alt="Placeholder Image">
+                  <figcaption>Anthropic (Claude AI) Logo</figcaption>
+                </figure>
+                
+
+                <h3>Other Notes</h3>
+
+                <p>Using AI made the inital creation of the website extreamly easy and honestly it did a better job than I could do at my current level of CSS and HTML (mostly CSS) knowledge however...Because I did not understand exactly what it did and how it did it changing styling or adding addional styling became much more challenging. I am sure if I added a lot more specifications and asked it to explain every line in depth it would have been able too but there is a lesson in this. AI is great if you want to do simple task or even repetitive task but actually understanding what is happening will help you more in the long run.</p>
+
+                <h3> Extra Prompt </h3>
+                <p>Please make this text sound better</p>
+                <h3>Response:</h3>
+                <p>The initial creation of the website was made extremely easy with the help of AI. Honestly, it did a better job than I could have done with my current level of CSS and HTML knowledge, especially when it came to CSS. However, because I didn't fully understand the AI's approach and the specifics of how it implemented the styling, making changes or adding additional styling became much more challenging. I'm sure that if I had provided more detailed specifications and asked for an in-depth explanation of every line, the AI could have assisted me further. Nevertheless, this experience taught me a valuable lesson: while AI is excellent for simple or repetitive tasks, truly understanding the underlying processes will be more beneficial in the long run.</p>
             `
         };
 
-        const pageContainer = document.getElementById('page-container');
-        const navLinks = document.querySelectorAll('nav a');
+      const pageContainer = document.getElementById("page-container");
+      const navLinks = document.querySelectorAll("nav a");
 
-        function loadPage(page) {
-            pageContainer.innerHTML = pages[page];
-        }
+      function loadPage(page) {
+        pageContainer.innerHTML = pages[page];
+      }
 
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const page = e.target.dataset.page;
-                loadPage(page);
-            });
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const page = e.target.dataset.page;
+          loadPage(page);
         });
+      });
 
-        // Load the home page by default
-        loadPage('home');
+      // Load the home page by default
+      loadPage("home");
+     
     </script>
-</body>
+    <script>
+      footer = document.getElementsByTagName('footer')[0]
+      footer.innerHTML = `<a href="https://validator.w3.org/check?uri=referer"
+      id="validation_link_html">
+      <img style="border:0;width:88px;height:31px"
+          src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png"
+          alt="Valid HTML!" href="https://validator.w3.org/check?uri=${location.href}">
+      </a>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer"
+      id="validation_link_css">
+      <img style="border:0;width:88px;height:31px"
+          src="https://jigsaw.w3.org/css-validator/images/vcss"
+          alt="Valid CSS!" href=https://jigsaw.w3.org/css-validator/validator?uri=${location.href}>
+      </a>
+      <a href="https://wave.webaim.org/report#/${location.href}">
+      <img style="border:0;width:88px;height:31px;display:"
+          src="/ctayl171/itis3135/images/button_validation_wcag.png"
+          alt="Disablility"> 
+      </a>`
+    </script>
+  </body>
 </html>

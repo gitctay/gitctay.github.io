@@ -3,20 +3,31 @@
 
 body
 {
-  margin: 100px;
+
   font-family: sans-serif;
-  color: #58a4b0;
+  color: #2a4977;
   background-color: #D8DBE2;
   font-size: 100%;
+  
+}
+
+nav{
+  background-color: #FFA69E;
+  border-radius: 15px;
+  border-color: #373f51;
+  border-style:ridge;
+  border-width: 3px;
+  padding: 5px;
+  max-width: fit-content;
 }
 
 a{
-  color: #373F51;
+  color: #373f51;
   text-decoration: none;
 }
 
 a:hover{
-  color: #DAA49A;
+  color: #537A5A;
 }
 
 .webeval section:first h2
@@ -33,9 +44,9 @@ color: green;
   /* For example: */
   main {
       font-size: 20px;
-      max-width: 1200px;
+      max-width: 1800px;
       margin: 0 auto;
-      width: 90%;
+      width: 100%;
   }
 }
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Arrays</title>
+        <link rel="stylesheet" href="styles/default.css">
+    </head>
+    <body>
+        <header></header>
+        <footer></footer>
+        <main>
+            <div class="container">
+                <div class="childDiv">
+                    <label for="nameBox">Name:</label>
+                    <input type="number" id="nameBox">
+                    <label for="salary">Salary:</label>
+                    <input type="text" id="salary">
+                    <button class="btnChild" id="addSalaryBtn">Add Salary</button>
+                </div>
+                
+                <div class="childDiv"></div>
+                <button class="btnChild" id="modifySalaryBtn">Modify Salary</button>
+                <div class="childDiv"></div>
+                <button class="btnChild" id="displayResultsBtn">Display Results</button>
+                <div class="childDiv"></div>
+                <button class="btnChild" id="displaySalaryBtn">Display Salary</button>
+            </div>
+            </section>
+            </main>
+            <style>
+                .container{
+                    margin:0%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    gap: 15px;
+                    width: auto;
+                    height: auto;
+                    max-width: 4000px;
+                }
+
+                .btnChild{
+                    max-width: 100px;
+                }
+            </style>
+            <script src="scripts/arrays.js"></script>
+        </body>
+    </html>
